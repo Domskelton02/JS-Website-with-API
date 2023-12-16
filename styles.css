@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#pokemon-collection, #favorites-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #000;
+    padding: 10px;
+}
+
+.pokemon-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+    margin: 5px;
+    position: relative;
+}
+
+@media screen and (min-width: 767px) {
+    #pokemon-collection, #favorites-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width: 1199px) {
+    #pokemon-collection, #favorites-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
